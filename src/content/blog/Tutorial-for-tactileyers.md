@@ -151,7 +151,8 @@ description: 一个简短的介绍，会出现在网站的预览里
 2. 在左下角输入你的标题和描述信息，是告诉我们你这次提交是什么主题的，以及描述一下你提交的内容
    ![截图：写你的提交主题和描述](https://media.discordapp.net/attachments/1190410492691365908/1190765750433091704/Screenshot_2023-12-30_at_4.17.52_PM.png?ex=65a2fe06&is=65908906&hm=4f7b0d3f2f8895a671078c91c3f94105e4e5593ec4845ccf56be282515abf74a&=&width=996&height=800)
 3. 点击下方的"Commit to main"或者“提交到主库”
-4. 不要忘记！你还得惦记
+4. 不要忘记！你还得点击右上角的 Push origin，也就是推送出去。不然你的文章是不会出现在网站上的！
+   ![记得要推送出去！要push！](https://media.discordapp.net/attachments/1190410492691365908/1190766218404171836/Screenshot_2023-12-30_at_4.19.44_PM.png?ex=65a2fe75&is=65908975&hm=fd7cb2132dee680dfef6b3b6eb806dd60db1a16a261106df27f694bed3116a94&=&width=2476&height=254)
 
 ### 使用Git
 
