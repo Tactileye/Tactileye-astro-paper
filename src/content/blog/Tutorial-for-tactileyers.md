@@ -77,7 +77,7 @@ Git会比较硬核一点，但是一旦设置好了也会比较轻松。
 1. 来到你的文件夹(叫 "tactileye-astro-paper" 的文件夹)
 2. 文件夹里，找到一个叫"src"的文件夹，里面有一个叫“content"的文件夹，然后这里面有一个叫"blog"的文件夹
    ![截图：找到名字叫"blog"的文件夹](https://media.discordapp.net/attachments/1190410492691365908/1190752565755908217/Screenshot_2023-12-30_at_3.25.30_PM.png?ex=65a2f1be&is=65907cbe&hm=95d1d456052e3d77cab1050a032a7a1f0dc6be4349c442a6f36eb05dfead2b7a&=&width=1090&height=1178)
-3. 你选择使用你喜欢的文本编辑器或者编译软件，我一般使用[VScode](https://code.visualstudio.com), 如果是这样的话你可以把这个文件夹直接拖进VScode里。
+3. 你可以在这个文件夹里添加新的文章——**注意**，文件的格式必须是[Markdown](https://www.markdownguide.org/basic-syntax/)格式的，也就是文件是以“.md"结尾的。Markdown是一种比较普遍用于写程序教程文档的一种语言，可以进行比较简单统一的文字格式风格。你选择使用你喜欢的文本编辑器或者编译软件，我一般使用[VScode](https://code.visualstudio.com), 如果是这样的话你可以把这个文件夹直接拖进VScode里。
    你也可以选择使用别的，使用txt编辑器都可以。
 
 ### 方式三：在线文件夹
@@ -86,7 +86,7 @@ Git会比较硬核一点，但是一旦设置好了也会比较轻松。
 
 1. 直接来到[blog 文件夹](https://github.com/Tactileye/Tactileye-astro-paper/tree/main/src/content/blog)，点击左边的链接即可。
 
-2. 可以直接点击这个链接进入示例post的在线编辑地址：[sample-post.md](https://github.dev/Tactileye/Tactileye-astro-paper/blob/main/src/content/blog/sample-post.md) 
+2. 可以直接点击这个链接进入示例post的在线编辑地址：[sample-post.md](https://github.dev/Tactileye/Tactileye-astro-paper/blob/main/src/content/blog/sample-post.md) 然后你就可以跳到第三步了。
    当然你也可以自己从零开始新建一个文件，具体步骤如下：
    
    a. 你可以点击右侧Add File新建一个文件
@@ -96,17 +96,10 @@ Git会比较硬核一点，但是一旦设置好了也会比较轻松。
    b. 然后选择commit changes，在新的文件页面右侧的小工具栏里选择用github.dev打开
    ![选择open with github.dev](https://media.discordapp.net/attachments/1190410492691365908/1190776905402687488/Screenshot_2023-12-30_at_5.02.13_PM.png?ex%253D65a30869%2526is%253D65909369%2526hm%253Daf5983c95b78a9c8a7aa8f3d31dc4dae4eb435b6dea8c615590851a537627577%2526%253D%2526width%253D1148%2526height%253D1048)
    
-2. 来到左侧的三个横线，也就是菜单栏，然后点击 File/文件，选在其中的 Open File/打开文件。
-
-
-知道你看到你的用户名和tactileye的用户名，选择tactileye的名字，然后你就可以找到这个库了。之后的流程和本地文件夹一样。
 
 ## 第三步：开始编辑
 
-
-新建一个文件，但是*文件后缀名一定得是.md格式*的。如果你是使用github dev那样的在线编辑器，那就和VS code 是一样的。
-4. 你可以在这个文件夹里添加新的文章——**注意**，文件的格式必须是[Markdown](https://www.markdownguide.org/basic-syntax/)格式的，Markdown是一种比较普遍用于写程序教程文档的一种语言，可以进行比较简单统一的文字格式风格。
-5. 在文章的开头，你需要添加一个YAML Formatter，这个是可以告诉我们的数据库你这个文章的一些metadata（元数据），就是关于它的一些信息，有助于网站的生成。例如：
+1. 在文章的开头，你需要添加一个YAML Formatter，这个是可以告诉我们的数据库你这个文章的一些metadata（元数据），就是关于它的一些信息，有助于网站的生成。例如：
 
    ```yaml
    # src/content/blog/sample-post.md
@@ -131,17 +124,19 @@ Git会比较硬核一点，但是一旦设置好了也会比较轻松。
    ---
    ```
 
-做完这一步，你就可以开始编辑了。如果你了解了一点markdown，你会知道可以通过打井号来直接生成标题，例如：
+2. 做完这一步，你就可以开始编辑了。如果你了解了一点markdown，你会知道可以通过打井号来直接生成标题，例如：
 
-```markdown
-## 二级标题
-```
+   ```markdown
+   ## 二级标题
+   ```
 
-需要注意的是井号后面的空格也是必须要的。效果就是如下：
+   需要注意的是井号后面的空格也是必须要的。效果就是如下：
 
-## 二级标题
+   ## 二级标题
 
-但是需要注意的是，因为我们的文章标题已经在formatter里写好了，所以你写文章是从二级标题开始写，也就是从两个井号开始。
+   但是需要注意的是，因为我们的文章标题已经在formatter里写好了，所以你写文章是从二级标题开始写，也就是从两个井号开始。
+
+P.S.
 
 另一个重要的技巧就是添加图片。代码类似下面这样：
 
@@ -161,7 +156,7 @@ Git会比较硬核一点，但是一旦设置好了也会比较轻松。
 
 ## 最后一步：上传到数据库
 
-你已经做好了编辑。如果是在线编辑，保存就可以了。如果你是在本地编辑的，那么你还需要有一步就是上传回github里。
+你已经做好了编辑。如果你是在本地编辑的，那么你还需要有一步就是上传回github里。
 
 ### 方式一：使用Github客户端
 
@@ -210,5 +205,12 @@ Git会比较硬核一点，但是一旦设置好了也会比较轻松。
    ```
    git push
    ```
+
+### 方式三：在线编辑器（以github.dev为例）&& VScode
+
+如果你是使用GitHub dev，它的界面会和vscode比较相似，所以你也可以在VScode里是用这样的技巧。你会在侧边拦找到一个叫Source Control的按钮，或者是源管理。
+![源管理里面会显示你修改的文件，点击Commit & Push](https://media.discordapp.net/attachments/1190410492691365908/1190778821549490347/Screenshot_2023-12-30_at_5.09.50_PM.png?ex%253D65a30a32%2526is%253D65909532%2526hm%253Deb554f69984cadcb9d8b3b375ca1879cf60bb26247550147e50502547668a747%2526%253D%2526width%253D1372%2526height%253D776)
+
+源管理里面会显示你修改的文件，填写你的提交message，然后点击Commit & Push就可以一气呵成地提交数据库了。当然，你也可以选择先commit然后再push。
 
 然后就大功告成了！过几分钟刷新网站，你的文章就会出现在页面里了
