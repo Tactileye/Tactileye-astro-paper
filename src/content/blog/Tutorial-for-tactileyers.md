@@ -11,15 +11,19 @@ tags:
 description: 教你如何在触目上更新文章
 ---
 
-## 注册账号、获得权限
+## Table of Contents
+
+## 第一步：注册账号、获得权限
 
 首先，触目的网站内容是寄托在 [Github](https://github.com) 上面的。虽然 Github 的库是公开的，但是想要在上面编辑内容，你需要注册一个 GitHub 账号，然后询问管理员要 [这个repository](https://github.com/Tactileye/Tactileye-astro-paper) 的权限。
 
 P.S. 使用github有可能需要魔法上网。如果你有触目官方的 github 账号和密码，也可以自己操作转移权限。
 
-## 获得你的本地文件夹
+## 第二步：获得触目网站数据库
 
-### Github客户端
+你有三种方式来获得触目的网站数据库，选择其中一种就好。
+
+### 方式一：Github客户端
 
 其中一种方式是[github的客户端](https://desktop.github.com)，登陆之后你可以克隆一份触目网站的repository到你的本地电脑上。
 
@@ -33,7 +37,7 @@ P.S. 使用github有可能需要魔法上网。如果你有触目官方的 githu
 
 ![屏幕截图：选择触目的repository进行克隆](https://media.discordapp.net/attachments/1190410492691365908/1190411043952918649/Screenshot_2023-12-29_at_4.48.24_PM.png?ex=65a1b3ad&is=658f3ead&hm=c575e15efc5aad03c232e0aeacd8a59f5a03a89cba425e21dc7a1b64f238e089&=&width=1194&height=1178)
 
-### Git
+### 方式二：Git
 
 Git会比较硬核一点，但是一旦设置好了也会比较轻松。
 
@@ -68,24 +72,19 @@ Git会比较硬核一点，但是一旦设置好了也会比较轻松。
    git remote add origin https://github.com/Tactileye/Tactileye-astro-paper.git
    ```
 
-## 找到文件夹和选择编辑器
+### 方式三：在线文件夹
 
-### 本地文件夹
+和本地文件相似，你也可以在线用一些平台对github里的文件进行编辑。我比较推荐的是[github.dev](http://Github.dev),你登陆之后，一开始是会给你来到一个叫github/dev的文件夹，你要去到上两级的文件夹，知道你看到你的用户名和tactileye的用户名，选择tactileye的名字，然后你就可以找到这个库了。之后的流程和本地文件夹一样。
 
-1. 当你下载好了文件之后，来到你的文件夹(一个叫tactileye-astro-paper的文件夹)
+## 第三步：找到文件夹，开始编辑
+
+1. 来到你的文件夹(叫 "tactileye-astro-paper" 的文件夹)
 2. 文件夹里，找到一个叫"src"的文件夹，里面有一个叫“content"的文件夹，然后这里面有一个叫"blog"的文件夹
    ![截图：找到名字叫"blog"的文件夹](https://media.discordapp.net/attachments/1190410492691365908/1190752565755908217/Screenshot_2023-12-30_at_3.25.30_PM.png?ex=65a2f1be&is=65907cbe&hm=95d1d456052e3d77cab1050a032a7a1f0dc6be4349c442a6f36eb05dfead2b7a&=&width=1090&height=1178)
 3. 你选择使用你喜欢的文本编辑器或者编译软件，我一般使用[VScode](https://code.visualstudio.com), 如果是这样的话你可以把这个文件夹直接拖进VScode里。
-   你也可以选择使用别的，使用txt编辑器都可以。那样你就新建一个文件，但是*文件后缀名一定得是.md格式*的。
-
-### 在线文件夹
-
-和本地文件相似，你也可以在线用一些平台对github里的文件进行编辑。我比较推荐的是github.dev,你登陆之后，一开始是会给你来到一个叫github/dev的文件夹，你要去到上两级的文件夹，知道你看到你的用户名和tactileye的用户名，选择tactileye的名字，然后你就可以找到这个库了。之后的流程和本地文件夹一样。
-
-## 进行编辑
-
-1. 你可以在这个文件夹里添加新的文章——**注意**，文件的格式必须是[Markdown](https://www.markdownguide.org/basic-syntax/)格式的，Markdown是一种比较普遍用于写程序教程文档的一种语言，可以进行比较简单统一的文字格式风格。
-2. 在文章的开头，你需要添加一个YAML Formatter，这个是可以告诉我们的数据库你这个文章的一些metadata（元数据），就是关于它的一些信息，有助于网站的生成。例如：
+   你也可以选择使用别的，使用txt编辑器都可以。那样你就新建一个文件，但是*文件后缀名一定得是.md格式*的。如果你是使用github dev那样的在线编辑器，那就和VS code 是一样的。
+4. 你可以在这个文件夹里添加新的文章——**注意**，文件的格式必须是[Markdown](https://www.markdownguide.org/basic-syntax/)格式的，Markdown是一种比较普遍用于写程序教程文档的一种语言，可以进行比较简单统一的文字格式风格。
+5. 在文章的开头，你需要添加一个YAML Formatter，这个是可以告诉我们的数据库你这个文章的一些metadata（元数据），就是关于它的一些信息，有助于网站的生成。例如：
 
    ```yaml
    # src/content/blog/sample-post.md
@@ -138,11 +137,11 @@ Git会比较硬核一点，但是一旦设置好了也会比较轻松。
 
 不推荐把图片直接放到我们的数据库里！容量有限可能会爆炸！
 
-## 上传到数据库
+## 最后一步：上传到数据库
 
-你已经做好了编辑。如果你是在本地编辑的，那么你还需要有一步就是上传回github里。
+你已经做好了编辑。如果是在线编辑，保存就可以了。如果你是在本地编辑的，那么你还需要有一步就是上传回github里。
 
-### 使用Github客户端
+### 方式一：使用Github客户端
 
 1. 当你编辑完并且保存之后之后，你会看到你的github客户端已经会显示你修改的很多内容了
 
@@ -154,7 +153,7 @@ Git会比较硬核一点，但是一旦设置好了也会比较轻松。
 4. 不要忘记！你还得点击右上角的 Push origin，也就是推送出去。不然你的文章是不会出现在网站上的！
    ![记得要推送出去！要push！](https://media.discordapp.net/attachments/1190410492691365908/1190766218404171836/Screenshot_2023-12-30_at_4.19.44_PM.png?ex=65a2fe75&is=65908975&hm=fd7cb2132dee680dfef6b3b6eb806dd60db1a16a261106df27f694bed3116a94&=&width=2476&height=254)
 
-### 使用Git
+### 方式二：使用Git
 
 1. 添加文件
 
