@@ -6,7 +6,7 @@ postSlug: hi-hair-workshop
 featured: true
 draft: false
 tags:
-  - documentation
+  - documentation-回顾
 description: On December 2nd, Leilei Xia hosted a tactile workshop about hair in the Anderson, within the exhibition of “Coming Into Contact” curated by Isa Dray. In the workshop, 12 participants paired up and learnt how to say “Hair” to each other, learnt a tactile theatre which imagines being in the sea using hair, and came up with their own tactile theatre piece by improvising on one another’s hair.
 ---
 
