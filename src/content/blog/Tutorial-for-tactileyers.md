@@ -87,28 +87,28 @@ Git会比较硬核一点，但是一旦设置好了也会比较轻松。
 1. 你可以在这个文件夹里添加新的文章——**注意**，文件的格式必须是[Markdown](https://www.markdownguide.org/basic-syntax/)格式的，Markdown是一种比较普遍用于写程序教程文档的一种语言，可以进行比较简单统一的文字格式风格。
 2. 在文章的开头，你需要添加一个YAML Formatter，这个是可以告诉我们的数据库你这个文章的一些metadata（元数据），就是关于它的一些信息，有助于网站的生成。例如：
 
-```yaml
-# src/content/blog/sample-post.md
-# 这里面井号后面的字都是评论和注释
---- #这里和下面三条杠都是必须要的，而且这一部分应该放在文章的开头。
-title: 你的文章标题
-author: 你的名字
-pubDatetime: 2022-09-21T05:17:19Z
-slug: the-title-of-the-post
-#slug代表的是这个网址会显示什么内容，一般就是一个后缀，所以这里面的文字*不要包含空格*。例如：a workshop 应该改为 a-workshop
-featured: true
-# 就是你的文章是否出现在首页上
-draft: false
-#如果draft是true的话，你的文章只会保存在数据库里，2而不会出现在网站的任何地方
-tags:
-  - 一些
-  - 案例
-  - 标签
-# tags可以参考之前有过的tags，例如“documentation-回顾”，“tutorial-教程“。已经有的tag就不要创建一个新的但是其实是一样的tag了
-ogImage: ""
-description: 一个简短的介绍，会出现在网站的预览里
----
-```
+   ```yaml
+   # src/content/blog/sample-post.md
+   # 这里面井号后面的字都是评论和注释
+   --- #这里和下面三条杠都是必须要的，而且这一部分应该放在文章的开头。
+   title: 你的文章标题
+   author: 你的名字
+   pubDatetime: 2022-09-21T05:17:19Z
+   slug: the-title-of-the-post
+   #slug代表的是这个网址会显示什么内容，一般就是一个后缀，所以这里面的文字*不要包含空格*。例如：a workshop 应该改为 a-workshop
+   featured: true
+   # 就是你的文章是否出现在首页上
+   draft: false
+   #如果draft是true的话，你的文章只会保存在数据库里，2而不会出现在网站的任何地方
+   tags:
+     - 一些
+     - 案例
+     - 标签
+   # tags可以参考之前有过的tags，例如“documentation-回顾”，“tutorial-教程“。已经有的tag就不要创建一个新的但是其实是一样的tag了
+   ogImage: ""
+   description: 一个简短的介绍，会出现在网站的预览里
+   ---
+   ```
 
 做完这一步，你就可以开始编辑了。如果你了解了一点markdown，你会知道可以通过打井号来直接生成标题，例如：
 
