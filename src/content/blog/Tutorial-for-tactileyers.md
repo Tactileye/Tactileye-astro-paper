@@ -90,14 +90,13 @@ Git会比较硬核一点，但是一旦设置好了也会比较轻松。
 
 2. 可以直接点击这个链接进入示例post的在线编辑地址：[sample-post.md](https://github.dev/Tactileye/Tactileye-astro-paper/blob/main/src/content/blog/sample-post.md) 然后你就可以跳到第三步了。
    当然你也可以自己从零开始新建一个文件，具体步骤如下：
-   
+
    a. 你可以点击右侧Add File新建一个文件
    ![新建文件，或者上传文件都可以](https://media.discordapp.net/attachments/1190410492691365908/1190776001257549854/Screenshot_2023-12-30_at_4.58.37_PM.png?ex%253D65a30792%2526is%253D65909292%2526hm%253Dd836381605bf752135d4d09ca2a4ab4f1aee005bf192fe381c6b1935921e5a3f%2526%253D%2526width%253D824%2526height%253D528)
    注意你需要输入你新建的文件的名字，需要是.md结尾的
    ![你的文件名.md](https://media.discordapp.net/attachments/1190410492691365908/1190776281877458984/Screenshot_2023-12-30_at_4.59.43_PM.png?ex%253D65a307d5%2526is%253D659092d5%2526hm%253D59638c6313038b4f391365532785280c9c79252f282e10bffafffd89fb505403%2526%253D%2526width%253D2476%2526height%253D184)
    b. 然后选择commit changes，在新的文件页面右侧的小工具栏里选择用github.dev打开
    ![选择open with github.dev](https://media.discordapp.net/attachments/1190410492691365908/1190776905402687488/Screenshot_2023-12-30_at_5.02.13_PM.png?ex%253D65a30869%2526is%253D65909369%2526hm%253Daf5983c95b78a9c8a7aa8f3d31dc4dae4eb435b6dea8c615590851a537627577%2526%253D%2526width%253D1148%2526height%253D1048)
-   
 
 ## 第三步：开始编辑
 
@@ -106,24 +105,28 @@ Git会比较硬核一点，但是一旦设置好了也会比较轻松。
    ```yaml
    # src/content/blog/sample-post.md
    # 这里面井号后面的字都是评论和注释
-   --- #这里和下面三条杠都是必须要的，而且这一部分应该放在文章的开头。
+   #这里和下面三条杠都是必须要的，而且这一部分应该放在文章的开头。
+   ---
    title: 你的文章标题
    author: 你的名字
    pubDatetime: 2022-09-21T05:17:19Z
    slug: the-title-of-the-post
-   #slug代表的是这个网址会显示什么内容，一般就是一个后缀，所以这里面的文字*不要包含空格*。例如：a workshop 应该改为 a-workshop
-   featured: true
-   # 就是你的文章是否出现在首页上
-   draft: false
-   #如果draft是true的话，你的文章只会保存在数据库里，2而不会出现在网站的任何地方
+   featured: false
+   draft: true
    tags:
      - 一些
      - 案例
      - 标签
-   # tags可以参考之前有过的tags，例如“documentation-回顾”，“tutorial-教程“。已经有的tag就不要创建一个新的但是其实是一样的tag了
    ogImage: ""
    description: 一个简短的介绍，会出现在网站的预览里
    ---
+   #slug代表的是这个网址会显示什么内容，一般就是一个后缀，所以这里面的文字*不要包含空格*。例如：a workshop 应该改为 a-workshop
+
+   #如果draft是true的话，你的文章只会保存在数据库里，2而不会出现在网站的任何地方
+
+   # tags可以参考之前有过的tags，例如“documentation-回顾”，“tutorial-教程“。已经有的tag就不要创建一个新的但是其实是一样的tag了
+
+   # 就是你的文章是否出现在首页上
    ```
 
 2. 做完这一步，你就可以开始编辑了。如果你了解了一点markdown，你会知道可以通过打井号来直接生成标题，例如：
@@ -139,7 +142,6 @@ Git会比较硬核一点，但是一旦设置好了也会比较轻松。
    但是需要注意的是，因为我们的文章标题已经在formatter里写好了，所以你写文章是从二级标题开始写，也就是从两个井号开始。
 
 P.S.
-
 另一个重要的技巧就是添加图片。代码类似下面这样：
 
 ```markdown
