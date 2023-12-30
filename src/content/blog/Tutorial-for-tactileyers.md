@@ -144,6 +144,15 @@ description: 一个简短的介绍，会出现在网站的预览里
 
 ### 使用Github客户端
 
+1. 当你编辑完并且保存之后之后，你会看到你的github客户端已经会显示你修改的很多内容了
+
+   ![截图：github客户端上会显示你修改了哪些内容](https://media.discordapp.net/attachments/1190410492691365908/1190764950944235642/Screenshot_2023-12-30_at_4.14.44_PM.png?ex=65a2fd47&is=65908847&hm=4223a24b11d933fef3ad7cc50bde78fb6a63073b3ef09cfcdeafb487b812c640&=&width=1720&height=1178)
+
+2. 在左下角输入你的标题和描述信息，是告诉我们你这次提交是什么主题的，以及描述一下你提交的内容
+   ![截图：写你的提交主题和描述](https://media.discordapp.net/attachments/1190410492691365908/1190765750433091704/Screenshot_2023-12-30_at_4.17.52_PM.png?ex=65a2fe06&is=65908906&hm=4f7b0d3f2f8895a671078c91c3f94105e4e5593ec4845ccf56be282515abf74a&=&width=996&height=800)
+3. 点击下方的"Commit to main"或者“提交到主库”
+4. 不要忘记！你还得惦记
+
 ### 使用Git
 
 1. 添加文件
