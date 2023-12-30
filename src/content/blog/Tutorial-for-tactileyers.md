@@ -7,6 +7,7 @@ featured: true
 draft: false
 tags:
   - tutorial-教程
+  - Tactileye-organization
 description: 教你如何在触目上更新文章
 ---
 
