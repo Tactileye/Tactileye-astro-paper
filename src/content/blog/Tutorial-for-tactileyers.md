@@ -19,7 +19,9 @@ P.S. 使用github有可能需要魔法上网。如果你有触目官方的 githu
 
 ## 获得你的本地文件夹
 
-我建议你可以下载[github的客户端](https://desktop.github.com)，登陆之后你可以克隆一份触目网站的repository到你的本地电脑上。
+### Github客户端
+
+其中一种方式是[github的客户端](https://desktop.github.com)，登陆之后你可以克隆一份触目网站的repository到你的本地电脑上。
 
 具体就是你在登陆后，来到 Github 客户端左上角，点击“add/添加”，然后在下拉菜单里选择“Clone Repository/克隆储存库”
 
@@ -30,6 +32,41 @@ P.S. 使用github有可能需要魔法上网。如果你有触目官方的 githu
 在下面的 Local Path/本地路径 选择你希望把触目的数据库保存在哪儿。注意需要选择一个完全空的文件夹。
 
 ![屏幕截图：选择触目的repository进行克隆](https://media.discordapp.net/attachments/1190410492691365908/1190411043952918649/Screenshot_2023-12-29_at_4.48.24_PM.png?ex=65a1b3ad&is=658f3ead&hm=c575e15efc5aad03c232e0aeacd8a59f5a03a89cba425e21dc7a1b64f238e089&=&width=1194&height=1178)
+
+### Git
+
+Git会比较硬核一点，但是一旦设置好了也会比较轻松。
+
+1. 安装 Git
+
+   首先，你需要在你的计算机上安装 Git。你可以访问 Git 官网 来下载适用于你操作系统的 Git 版本。安装过程中，你可以接受大多数默认设置。
+
+2. 配置 Git
+
+   安装完成后，打开终端（在 Windows 上是命令提示符或 PowerShell），输入一下信息，然后回车：
+
+   ```bash
+   git config --global user.name "你的名字"
+   git config --global user.email "你的邮箱"
+   ```
+
+   注意请把里面的你的名字、你的邮箱都替换成你自己的
+
+   这些信息会用在你的提交（commit）上。
+
+3. 克隆我们的仓库
+
+   如果你想要在本地工作一个已经存在的远程仓库，可以使用 git clone 命令：
+
+   ```bash
+   git clone https://github.com/Tactileye/Tactileye-astro-paper.git
+   ```
+
+   这会将远程仓库复制到你的本地机器上。如果你想确保你配置好了，也可以输入一下命令。
+
+   ```bash
+   git remote add origin https://github.com/Tactileye/Tactileye-astro-paper.git
+   ```
 
 ## 找到文件夹和选择编辑器
 
@@ -52,31 +89,30 @@ P.S. 使用github有可能需要魔法上网。如果你有触目官方的 githu
 
 ```yaml
 # src/content/blog/sample-post.md
----
+# 这里面井号后面的字都是评论和注释
+--- #这里和下面三条杠都是必须要的，而且这一部分应该放在文章的开头。
 title: 你的文章标题
 author: 你的名字
 pubDatetime: 2022-09-21T05:17:19Z
 slug: the-title-of-the-post
+#slug代表的是这个网址会显示什么内容，一般就是一个后缀，所以这里面的文字*不要包含空格*。例如：a workshop 应该改为 a-workshop
 featured: true
+# 就是你的文章是否出现在首页上
 draft: false
+#如果draft是true的话，你的文章只会保存在数据库里，2而不会出现在网站的任何地方
 tags:
   - 一些
   - 案例
   - 标签
+# tags可以参考之前有过的tags，例如“documentation-回顾”，“tutorial-教程“。已经有的tag就不要创建一个新的但是其实是一样的tag了
 ogImage: ""
 description: 一个简短的介绍，会出现在网站的预览里
 ---
 ```
 
-**_Formatter 注意事项_**
-
-1. 上面的三条杠都是必须要的，而且这一部分应该放在文章的开头。
-2. slug代表的是这个网址会显示什么内容，一般就是一个后缀，所以这里面的文字*不要包含空格*。例如：a workshop 应该改为 a-workshop
-3. tags可以参考之前有过的tags，例如“documentation-回顾”，“tutorial-教程“。已经有的tag就不要创建一个新的但是其实是一样的tag了
-
 做完这一步，你就可以开始编辑了。如果你了解了一点markdown，你会知道可以通过打井号来直接生成标题，例如：
 
-```
+```markdown
 ## 二级标题
 ```
 
@@ -88,7 +124,7 @@ description: 一个简短的介绍，会出现在网站的预览里
 
 另一个重要的技巧就是添加图片。代码类似下面这样：
 
-```
+```markdown
 ![图片描述](图片的链接,xxx.jpg,最好是一个在网上的图片地址)
 ```
 
@@ -101,3 +137,37 @@ description: 一个简短的介绍，会出现在网站的预览里
 关于图片的链接，你可以把图片先发到网上，然后复制图片地址到那个括号里。如果你能够使用 [Discord](https://discord.com) （一个聊天平台），可以询问触目的discord管理员把你添加入discord群，你可以把图片发到那里，discord会生成一个永不过期的图片地址。只要是小于25M的都可以发送。（质量也相当高的）
 
 不推荐把图片直接放到我们的数据库里！容量有限可能会爆炸！
+
+## 上传到数据库
+
+你已经做好了编辑。如果你是在本地编辑的，那么你还需要有一步就是上传回github里。
+
+### 使用Github客户端
+
+### 使用Git
+
+1. 添加文件
+
+在你的仓库中创建或修改文件后，你需要使用 git add 命令将它们添加到暂存区：
+
+```bash
+git add <文件名>
+```
+
+使用 `git add .` 可以添加所有更改过的文件。
+
+2. 提交更改
+
+要将这些更改保存到仓库的历史记录中，你需要进行提交：
+
+```
+git commit -m "提交信息"
+```
+
+这样你可以提交你的代码，但这不代表它就更新了。要把代码push到原来的库上，你需要输入下面的命令：
+
+```
+git push
+```
+
+然后就大功告成了！过几分钟刷新网站，你的文章就会出现在页面里了
